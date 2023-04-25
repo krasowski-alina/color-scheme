@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Color Scheme Generator</h1>
+        <form id="generateForm">
+            <input type="color" class="color-input" id="color-input" value="#ff0000">
+            <select id="choose-scheme">
+                <option selected disabled>Choose scheme</option>
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option>
+            </select>
+            <button id="get-color-btn">Get color scheme</button>
+        </form>
+        <section class="wrapper" id="wrapper">
+            <div class="color-block"></div>
+            <div class="color-block"></div>
+            <div class="color-block"></div>
+            <div class="color-block"></div>
+            <div class="color-block"></div>
+            <p class="color-name" id="one"></p>
+            <p class="color-name" id="two"></p>
+            <p class="color-name" id="three"></p>
+            <p class="color-name" id="four"></p>
+            <p class="color-name" id="five"></p>
+            
+        </section>
+        <script src="index.js"></script>
+</body>
+</html>
