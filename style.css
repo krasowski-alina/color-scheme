@@ -16,10 +16,13 @@ h1 {
     text-align: center;
 }
 button, 
-p {
+.color-name {
     color: #1746A2;
     font-size: 1rem;
     text-shadow: .4px .4px .4px black;
+}
+button {
+    line-height: .9;
 }
 input,
 select,
@@ -45,11 +48,11 @@ form {
     grid-template-columns: repeat(5, minmax(60px, 1fr));
     grid-template-rows: 2fr 1fr;
 }
-p {
+.color-name {
     justify-self: center;
 }
 .color-block {
     height: 300px;
-    background-color: #dddddd;
+    background-color: #FFF7E9;
     border: 1px solid black;
 }
