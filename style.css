@@ -1,7 +1,7 @@
-html, body {
+body {
     margin: 0;
     padding: 0;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     background-color: #374151;
     font-family: 'Rubik', sans-serif;
@@ -15,30 +15,31 @@ h1 {
     font-weight: bold;
     text-align: center;
 }
-button, 
-.color-name {
-    color: #1746A2;
-    font-size: 1rem;
-    text-shadow: .4px .4px .4px black;
-}
-button {
-    line-height: .9;
-}
 input,
 select,
 button {
     font-family: inherit;
     border: none;
     border-radius: 2px; 
-    padding: 0 0.5em;
+    padding: 0.3em 0.5em;
+    font-size: 1rem;
+}
+button {
+    color: #FFFFFF;
+    background: linear-gradient(162deg, rgba(255,115,29,1) 36%, rgba(95,157,247,1) 64%);
+    text-shadow: .4px .4px .4px black;
+    line-height: .9;
+    padding: .5em;
+    font-size: 1.125rem;
 }
 .color-input {
-    min-height: 40px;
     padding: 0;
+    min-height: 40px;
 }
 form {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 1em;
     gap: 1em;
 }
@@ -50,9 +51,35 @@ form {
 }
 .color-name {
     justify-self: center;
+    color: #FFF7E9;
+    padding: .5em;
+    font-size: .8rem;
 }
 .color-block {
     height: 300px;
     background-color: #FFF7E9;
     border: 1px solid black;
 }
+@media (min-width: 600px){
+    body {
+        min-width: 600px;
+        margin-top: 10vh;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    select {
+        font-size: 1.125rem;
+    }
+    .wrapper {
+        padding: 1em;
+        grid-template-columns: repeat(5, minmax(120px, 1fr));
+    }
+    .color-name,
+    button{
+        font-size: 1.375rem;
+    }
+    .color-block {
+        height: 420px;
+    }
+} 
