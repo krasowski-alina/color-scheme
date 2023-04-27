@@ -1,10 +1,10 @@
 let colorsArr = []
-const btn = document.getElementById('get-color-btn')
 const colorInput = document.getElementById('color-input')
 const schemeInput = document.getElementById('choose-scheme')
 const blocks = document.querySelectorAll('.color-block')
 
-btn.addEventListener("click", getColorScheme)
+document.getElementById('inputs-form').addEventListener("submit", getColorScheme)
+
 function getColorScheme(e){
     e.preventDefault()
     let color = colorInput.value.slice(1)
@@ -15,7 +15,7 @@ function getColorScheme(e){
       .then( data => {
             const hexArray = data.colors
             hexArray.map(color => {
-               colorsArr.push(color.hex.value)
+                colorsArr.push(color.hex.value)
           })
           renderColors()
       }) 
