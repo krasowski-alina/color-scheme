@@ -15,19 +15,20 @@ function getColorScheme(e){
       .then( data => {
             const hexArray = data.colors
             hexArray.map(color => {
-               colorsArr.push(color.hex.value)
+                colorsArr.push(color.hex.value)
           })
           renderColors()
       }) 
 }
 function renderColors(){
-  document.getElementById('one').textContent = colorsArr[0]
-  document.getElementById('two').textContent = colorsArr[1]
-  document.getElementById('three').textContent = colorsArr[2]
-  document.getElementById('four').textContent = colorsArr[3]
-  document.getElementById('five').textContent = colorsArr[4]
-let i =0
-blocks.forEach(block => {
-    return block.style.backgroundColor = colorsArr[i++]
-})
+  for( let i=0; i< colorsArr.length; i++){
+    document.querySelectorAll('.color-name').forEach(block=> {
+      return block.textContent = colorsArr[i++]
+    })
+  }
+  for(let i=0; i< colorsArr.length; i++){
+    document.querySelectorAll('.color-block').forEach(block => {
+      return block.style.backgroundColor = colorsArr[i++]
+    })
+  }
 }
