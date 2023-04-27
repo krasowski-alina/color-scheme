@@ -1,7 +1,6 @@
 let colorsArr = []
 const colorInput = document.getElementById('color-input')
 const schemeInput = document.getElementById('choose-scheme')
-const blocks = document.querySelectorAll('.color-block')
 
 document.getElementById('inputs-form').addEventListener("submit", getColorScheme)
 
@@ -21,13 +20,13 @@ function getColorScheme(e){
       }) 
 }
 function renderColors(){
-  document.getElementById('one').textContent = colorsArr[0]
-  document.getElementById('two').textContent = colorsArr[1]
-  document.getElementById('three').textContent = colorsArr[2]
-  document.getElementById('four').textContent = colorsArr[3]
-  document.getElementById('five').textContent = colorsArr[4]
-let i =0
-blocks.forEach(block => {
-    return block.style.backgroundColor = colorsArr[i++]
-})
+  for(let i=0; i< colorsArr.length; i++ ){
+    document.querySelectorAll('.color-block').forEach(block => {
+      return block[i].textContent = colorsArr[i]
+    })
+    document.querySelectorAll('.color-block').forEach(block => {
+      return block.style.backgroundColor = colorsArr[i]
+  })
+  }
+
 }
